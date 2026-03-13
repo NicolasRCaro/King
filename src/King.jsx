@@ -3,7 +3,7 @@ import "./King.css";
 function King(){
     const [Header,setHeader]=useState(["Inicio","Juegos","Trabajos"]);
     const [Headerderecha,setHeaderderecha]=useState(["Canjear Tarjeta regalo","Comunidad"]);
-    const [Integrantes,setIntegrantes]=useState(["Inicio","Juegos","Trabajos","Canjear Tarjeta regalo","Comunidad"]);
+    const [Integrantes,setIntegrantes]=useState(["Inicio","Juegos","Trabajos","Canjear Tarjeta regalo","Comunidad","Team","Corporate","Posts"]);
     const ObjImagenes = [
         {id:0,imagen: "https://www.king.com/media/aplg20fk/logo.svg?width=110&height=74&v=133770142968670000",},
         {id:1,imagen: "https://www.king.com/media/y0sdyzq4/hero-image.webp?width=1920&height=1080&v=133809811771700000&format=webp&quality=85"},
@@ -46,9 +46,9 @@ function King(){
                 <li><a href="#">{Integrantes[2]}</a></li>
                 <li><a href="#">{Integrantes[3]}</a></li>
                 <li><a href="#">{Integrantes[4]}</a></li>
-                <li><a href="#">{Integrantes[0]}</a></li>
-                <li><a href="#">{Integrantes[0]}</a></li>
-                <li><a href="#">{Integrantes[0]}</a></li>
+                <li><a href="#">{Integrantes[5]}</a></li>
+                <li><a href="#">{Integrantes[6]}</a></li>
+                <li><a href="#">{Integrantes[7]}</a></li>
             </ul>
             </header>
             <main>
