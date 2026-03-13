@@ -1,0 +1,711 @@
+/* Reset básico */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Header principal */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 40px;
+    background:linear-gradient(to right,#f5f5f5,#e9dcc8);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Listas */
+header ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+/* Links del menú */
+header li{
+    font-size:16px;
+    color:#444;
+    cursor:pointer;
+    font-weight:500;
+}
+
+/* Hover */
+header li:hover{
+    color:#ff6a00;
+}
+
+/* Logo */
+.HeaderLogo{
+    width:80px;
+    height:auto;
+}
+
+/* Centrar el logo */
+header a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ocultar Integrantes en desktop */
+.Integrantes{
+    display:none;
+}
+
+
+/* ======================= */
+/* RESPONSIVE ≤ 766px */
+/* ======================= */
+
+@media (max-width:766px){
+
+    header{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:15px;
+        padding:20px;
+    }
+
+    /* ocultar menus normales */
+    header ul:nth-of-type(1),
+    header ul:nth-of-type(2){
+        display:none;
+    }
+
+    /* menu movil */
+    .Integrantes{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+    }
+
+    .Integrantes li{
+        font-size:18px;
+    }
+
+    /* logo arriba */
+    .HeaderLogo{
+        width:70px;
+    }
+
+}
+.Imagen_Principal{
+    position: relative;
+    width: 100%;
+}
+
+/* Imagen completa sin recorte */
+.Imagen_Principal img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botón */
+.Imagen_Principal p{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background: linear-gradient(180deg,#ff9f00,#ff6a00);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 14px 35px;
+    border-radius: 30px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* Hover naranja */
+.Imagen_Principal p:hover{
+    background: linear-gradient(180deg,#ffb347,#ff7a18);
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.25);
+}
+/* CONTENEDOR GENERAL */
+.Doble_Div{
+    width:90%;
+    max-width:1400px;
+    margin:80px auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    background:#f7f7f7;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+    overflow:hidden;
+}
+
+/* DIV DERECHA (imagen candy crush) */
+.DivDerecha{
+    position:relative;
+    background:linear-gradient(180deg,#f5a6b3,#fbd3da);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+/* Imagen grande */
+.DivDerecha img:nth-child(1){
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Logo pequeño */
+.DivDerecha img:nth-child(2){
+    position:absolute;
+    top:40px;
+    right:40px;
+    width:180px;
+}
+
+/* BOTON JUEGA AHORA */
+.DivDerecha p{
+    position:absolute;
+    bottom:300px;
+    right:40px;
+
+    background:linear-gradient(180deg,#3fd1a2,#1ca87a);
+    color:white;
+    font-weight:bold;
+    font-size:18px;
+
+    padding:14px 40px;
+    border-radius:30px;
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.DivDerecha p:hover{
+    transform:translateX(-50%) scale(1.05);
+    box-shadow:0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* DIV IZQUIERDA (texto) */
+.DivIzquierda{
+    padding:60px 70px;
+    position:relative;
+}
+
+/* Línea divisora */
+.DivIzquierda::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:40px;
+    bottom:40px;
+    width:2px;
+    background:#e4b27c;
+}
+
+/* Imagen superior */
+.DivIzquierda img{
+    width:425px;
+    height:204px;
+    max-width:100%;
+    display:block;
+    margin:0 auto 30px auto;
+}
+/* TITULO */
+.DivIzquierda h2{
+    font-size:28px;
+    color:#ff6a00;
+    margin-bottom:20px;
+}
+
+/* TEXTO */
+.DivIzquierda p:nth-of-type(1){
+    font-size:16px;
+    line-height:1.6;
+    color:#444;
+    margin-bottom:40px;
+}
+
+/* BOTON TODOS LOS JUEGOS */
+.DivIzquierda p:nth-of-type(2){
+    width:220px;
+    text-align:center;
+
+    background:linear-gradient(180deg,#3fd1a2,#1ca87a);
+    color:white;
+    font-weight:bold;
+
+    padding:14px 20px;
+    border-radius:30px;
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.DivIzquierda p:nth-of-type(2):hover{
+    transform:scale(1.05);
+    box-shadow:0 8px 15px rgba(0,0,0,0.2);
+}
+/* RESPONSIVE */
+@media (max-width:766px){
+
+    .Doble_Div{
+        grid-template-columns:1fr;   /* pasa a vertical */
+        margin:40px auto;
+    }
+
+    /* IZQUIERDA */
+    .DivIzquierda{
+        padding:40px 30px;
+        text-align:center;
+    }
+
+    /* quitar linea vertical */
+    .DivIzquierda::before{
+        display:none;
+    }
+
+    .DivIzquierda img{
+        width:100%;
+        height:auto;
+    }
+
+    .DivIzquierda h2{
+        font-size:24px;
+    }
+
+    /* boton */
+    .DivIzquierda p:nth-of-type(2){
+        margin:0 auto;
+    }
+
+    /* DERECHA */
+    .DivDerecha{
+        padding:30px;
+    }
+
+    .DivDerecha img:nth-child(2){
+        width:140px;
+        top:20px;
+        right:20px;
+    }
+
+    /* BOTON JUEGA AHORA */
+    .DivDerecha p{
+        bottom:40px;
+        right:50%;
+        transform:translateX(50%);
+        font-size:16px;
+        padding:12px 30px;
+    }
+}
+/* CONTENEDOR */
+.Imagen_video{
+    position:relative;
+
+    width:90%;
+    max-width:1400px;
+    margin:80px auto;
+
+    overflow:hidden;
+    border-radius:25px;
+}
+
+/* Imagen principal */
+.Imagen_video img:nth-child(1){
+    width:100%;
+    display:block;
+}
+
+/* BOTON PLAY (centro exacto) */
+.Imagen_video img:nth-child(2){
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:80px;
+    cursor:pointer;
+}
+
+/* TEXTO "Making the World Playful" */
+.Imagen_video img:nth-child(3){
+    position:absolute;
+    top:20%;
+    right:8%;
+    width:320px;
+}
+
+/* BOTON VER TRABAJOS */
+.Imagen_video p{
+    position:absolute;
+    top:65%;
+    right:13%;
+
+    background:linear-gradient(#f7f7f7,#dcdcdc);
+    padding:16px 40px;
+    border-radius:35px;
+
+    font-size:18px;
+    font-weight:600;
+    color:#444;
+
+    box-shadow:0 6px 10px rgba(0,0,0,0.25);
+    cursor:pointer;
+
+    transition:all .3s ease;
+}
+
+/* HOVER BOTON */
+.Imagen_video p:hover{
+    transform:scale(1.05);
+}
+
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width:766px){
+
+    .Imagen_video{
+        margin:40px auto;
+        border-radius:15px;
+    }
+
+    /* boton play más pequeño */
+    .Imagen_video img:nth-child(2){
+        width:55px;
+    }
+
+    /* texto superior */
+    .Imagen_video img:nth-child(3){
+        width:180px;
+        top:12%;
+        right:5%;
+    }
+
+    /* boton trabajos */
+    .Imagen_video p{
+        top:75%;
+        right:50%;
+        transform:translateX(50%);
+        font-size:14px;
+        padding:10px 24px;
+    }
+
+}
+/* SECCION */
+.Juegos_destacados{
+    position:relative;
+
+    width:90%;
+    max-width:1200px;
+    margin:80px auto;
+
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:auto auto;
+    gap:30px;
+
+    padding-left:260px;
+}
+
+/* PERSONAJE */
+.Imagen_derecha{
+    position:absolute;
+    left:-120px;
+    top:-40px;
+    z-index:1;
+}
+
+.Imagen_derecha img{
+    width:360px;
+}
+
+/* TITULO */
+.Carrusel{
+    grid-column:1 / span 3;
+}
+
+.Carrusel h2{
+    font-size:22px;
+    color:#ff6a00;
+    font-weight:500;
+    margin-bottom:10px;
+}
+
+/* TARJETAS */
+.Primero,
+.Segundo,
+.Tercero{
+    background:#f3f3f3;
+    border-radius:10px;
+    overflow:hidden;
+
+    box-shadow:0 6px 10px rgba(0,0,0,0.18);
+
+    transition:transform .25s ease, box-shadow .25s ease;
+}
+
+/* HOVER */
+.Primero:hover,
+.Segundo:hover,
+.Tercero:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 20px rgba(0,0,0,0.25);
+}
+
+/* IMAGEN TARJETA */
+.Primero img,
+.Segundo img,
+.Tercero img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+}
+
+/* TITULOS */
+.Primero h3{ color:#0b67c2; }
+.Segundo h3{ color:#a033b8; }
+.Tercero h3{ color:#d6453d; }
+
+.Primero h3,
+.Segundo h3,
+.Tercero h3{
+    font-size:18px;
+    margin:14px 16px 6px;
+}
+
+/* TEXTO */
+.Primero p,
+.Segundo p,
+.Tercero p{
+    font-size:13px;
+    margin:0 16px 18px;
+    color:#333;
+    line-height:1.4;
+}
+
+
+/* ===================== */
+/* RESPONSIVE ≤ 766px */
+/* ===================== */
+
+@media (max-width:766px){
+
+    /* ocultar personaje */
+    .Imagen_derecha{
+        display:none;
+    }
+
+    /* tarjetas en vertical */
+    .Juegos_destacados{
+        grid-template-columns:1fr;
+        padding-left:0;
+        margin:50px auto;
+    }
+
+    /* titulo ocupa una sola columna */
+    .Carrusel{
+        grid-column:1;
+        text-align:center;
+    }
+
+}
+/* SECCION */
+.carrers{
+    position:relative;
+    width:90%;
+    max-width:1400px;
+    height:300px;
+    margin:40px auto;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    border-radius:15px;
+    font-family:sans-serif;
+}
+
+/* IMAGEN OFICINA */
+.carrers > img{
+    position:absolute;
+    right:0;
+    top:0;
+    width:55%;
+    height:100%;
+    object-fit:cover;
+    z-index:1;
+}
+
+/* DEGRADADO ROSA */
+.carrers::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:70%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #ff2f92 0%,
+        #ff3e97 40%,
+        rgba(255,62,151,0.6) 65%,
+        rgba(255,62,151,0.2) 80%,
+        transparent 100%
+    );
+    z-index:2;
+}
+
+/* CONTENEDOR */
+.carrers .contenedor{
+    position:relative;
+    z-index:3;
+    width:50%;
+    height:100%;
+    display:grid;
+    grid-template-columns:160px auto;
+    grid-template-rows:auto auto auto auto;
+    column-gap:30px;
+    align-items:center;
+    padding-left:60px;
+}
+
+/* CUADRO VERDE */
+.carrers .contenedor img:first-of-type{
+    grid-row:1 / span 4;
+    width:150px;
+}
+
+/* NUMERO */
+.carrers .contenedor span{
+    position:absolute;
+    left:115px;
+    top:100px;
+    font-size:48px;
+    font-weight:bold;
+    color:white;
+}
+
+/* OFERTAS DE TRABAJO */
+.carrers .contenedor a{
+    position:absolute;
+    left:85px;
+    top:165px;
+    font-size:13px;
+    color:white;
+    text-decoration:none;
+}
+
+.carrers .contenedor a:last-of-type{
+    left:130px;
+}
+
+/* TITULO */
+.carrers h2{
+    grid-column:2;
+    color:white;
+    font-size:26px;
+    margin:0;
+}
+
+/* TEXTO */
+.carrers p{
+    grid-column:2;
+    color:white;
+    font-size:13px;
+    line-height:1.5;
+    margin:5px 0;
+    max-width:280px;
+}
+
+/* BOTON */
+.carrers .Boton{
+    display:inline-block;
+    width:fit-content;
+    padding:10px 24px;
+    border-radius:25px;
+    background:#1db57a;
+    font-weight:bold;
+    box-shadow:0 5px 10px rgba(0,0,0,0.25);
+    cursor:pointer;
+}
+
+/* POLLITO */
+.carrers .contenedor img:last-of-type{
+    position:absolute;
+    right:-30px;
+    top:-20px;
+    width:90px;
+}
+
+/* ===================== */
+/* RESPONSIVE ≤ 766px */
+/* ===================== */
+
+@media (max-width:766px){
+
+    .carrers{
+        height:auto;
+        padding:40px 20px;
+    }
+
+    /* ocultar imagen oficina */
+    .carrers > img{
+        display:none;
+    }
+
+    /* mantener degradado pero ocupar todo */
+    .carrers::before{
+        width:100%;
+        background:linear-gradient(
+            180deg,
+            #ff2f92 0%,
+            #ff3e97 60%,
+            #ff2f92 100%
+        );
+    }
+
+    /* layout vertical */
+    .carrers .contenedor{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        padding-left:0;
+        gap:10px;
+    }
+
+    /* ocultar imagenes decorativas */
+    .carrers .contenedor img{
+        display:none;
+    }
+
+    /* numero */
+    .carrers .contenedor span{
+        position:static;
+        font-size:40px;
+    }
+
+    /* ofertas de trabajo */
+    .carrers .contenedor a{
+        position:static;
+        font-size:14px;
+    }
+
+    /* texto */
+    .carrers p{
+        max-width:100%;
+    }
+
+}
