@@ -1,0 +1,241 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+color:black;
+margin:0;
+font-family:Arial;
+background:#FFC6E1;
+overflow-x:hidden;
+max-width:100%;
+}
+
+.header{
+width:1800;
+height:80px;
+background:white;
+display:flex;
+align-items:center;
+justify-content:center;
+border-bottom:4px solid white;
+}
+
+.header img{
+height:60px;
+max-width:100%;
+}
+
+
+.container{
+display:flex;
+justify-content:center;
+align-items:flex-start;
+gap:40px;
+margin-top:40px;
+margin-left: 100px;
+width:100%;
+}
+
+
+
+.character{
+position:absolute; 
+margin-left:-1200px; 
+margin-top: 250px;
+width:200px;
+}
+
+
+
+.card{
+width:100%;
+max-width:1700px;
+background:whitesmoke;
+border-radius:18px;
+padding:30px;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+text-align:center;
+margin:auto;
+}
+
+
+
+.progress{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:40px;
+margin-bottom:20px;
+}
+
+.progress-step{
+text-align:center;
+}
+
+.heart{
+width:40px;
+height:40px;
+background:#ff8ec2;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-weight:bold;
+margin:auto;
+}
+
+
+.king-text{
+color:#ff7a00;
+font-weight:bold;
+}
+
+/* INPUTS */
+
+input{
+width:80%;
+color: black;
+max-width:400px;
+padding:12px;
+margin:10px 0;
+border-radius:25px;
+border:1px solid #ccc;
+outline:none;
+background:white;
+}
+
+
+.password{
+position:relative;
+display:flex;
+justify-content:center;
+}
+
+.eye{
+position:absolute;
+right:40%;
+top:22px;
+cursor:pointer;
+}
+
+.login-btn{
+background:#0b7a53;
+color:white;
+border:none;
+padding:12px 40px;
+border-radius:20px;
+cursor:pointer;
+}
+
+.facebook{
+margin-top:15px;
+background:#3b5998;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:20px;
+}
+
+.faq-card{
+width:100%;
+max-width:900px;
+margin:40px auto;
+background:#e9e5e2;
+border-radius:18px;
+padding:30px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.faq-title{
+color:#ff7a00;
+text-align:center;
+}
+
+.faq-item{
+padding:15px;
+border-bottom:1px solid #ccc;
+cursor:pointer;
+}
+
+
+
+.help-card{
+width:100%;
+max-width:900px;
+margin:40px auto;
+border-radius:20px;
+padding:40px;
+background:linear-gradient(90deg,#a6d6d9,#e59ad8);
+text-align:center;
+}
+
+.help-btn{
+display:block;
+margin:20px auto;
+background:#0b7a53;
+color:white;
+border:none;
+padding:12px 30px;
+border-radius:20px;
+cursor:pointer;
+}
+
+
+
+.footer{
+    width: 1800;
+background:#4a4a4a;
+color:white;
+text-align:center;
+padding:60px 20px;
+margin-left: 0px;
+margin-right:0px;
+}
+
+.footer img{
+height:40px;
+margin-bottom:20px;
+}
+
+.wave{
+height:40px;
+background:linear-gradient(90deg,#ff2e7e,#ff7a00,#ffcc00);
+border-top-left-radius:100% 40px;
+border-top-right-radius:100% 40px;
+margin-bottom:40px;
+}
+
+.copy{
+font-size:12px;
+}
+
+
+
+@media (max-width:768px){
+
+.container{
+flex-direction:column;
+}
+
+.character{
+width:150px;
+}
+
+input{
+width:100%;
+}
+
+.eye{
+right:10%;
+}
+
+.progress{
+gap:20px;
+}
+
+}
