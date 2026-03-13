@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./King.css";
+import Game from './Game'
+import PostsSection from "./PostsSection";
 function King(){
+    const [vistaActual, setVistaActual] = useState("king");
     const [Header,setHeader]=useState(["Inicio","Juegos","Trabajos"]);
     const [Headerderecha,setHeaderderecha]=useState(["Canjear Tarjeta regalo","Comunidad"]);
     const [Integrantes,setIntegrantes]=useState(["Inicio","Juegos","Trabajos","Canjear Tarjeta regalo","Comunidad","Team","Corporate","Posts"]);
@@ -23,6 +26,15 @@ function King(){
     ]
     const [Juegos,setJuegos]=useState(["Candy Crush Solitarie","Candy Crush Soda Saga","Farm Heroes Saga"]);
     const [Numero, setNumero]= useState(47); 
+    if (vistaActual === "game") {
+        return <Game />;
+    }
+    if (vistaActual === "trabajos")  return <Trabajos />;   
+    if (vistaActual === "tarjeta")   return <Tarjeta />;
+    if (vistaActual === "comunidad") return <Comunidad />;
+    if (vistaActual === "team")      return <Team />;
+    if (vistaActual === "corporate") return <Corporate />;
+    if (vistaActual === "PostsSection")     return <PostsSection />;
     return(
         <div>
             <header>
@@ -42,13 +54,13 @@ function King(){
             </ul>
             <ul className="Integrantes">
                 <li><a href="#">{Integrantes[0]}</a></li>
-                <li><a href="#">{Integrantes[1]}</a></li>
+                <li><a onClick={() => setVistaActual("game")} style={{cursor:"pointer"}}>{Integrantes[1]}</a></li>
                 <li><a href="#">{Integrantes[2]}</a></li>
                 <li><a href="#">{Integrantes[3]}</a></li>
                 <li><a href="#">{Integrantes[4]}</a></li>
                 <li><a href="#">{Integrantes[5]}</a></li>
                 <li><a href="#">{Integrantes[6]}</a></li>
-                <li><a href="#">{Integrantes[7]}</a></li>
+                <li><a onClick={() => setVistaActual("PostsSection")} style={{cursor:"pointer"}}>{Integrantes[7]}</a></li>
             </ul>
             </header>
             <main>

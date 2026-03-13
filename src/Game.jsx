@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import "./Game.css";
 function Game(){
 const [tema, setTema] = useState("light");
 
@@ -17,14 +18,6 @@ const redes=["Facebook","Twitter","Youtube","Linkedin","Instagram"]
 return(
     <div className={tema}>
     <div class="Menu">
-    <ul class="menu">
-       {menu.map((seccion,index)=> (
-        <li key={index}>{seccion}</li>
-       ))}
-       <img class="img3" src="https://www.king.com/media/aplg20fk/logo.svg?width=110&height=74&v=133770142968670000"></img>
-       <li class="men1">Canjear tarjeta regalo</li>
-       <li class="men2">Comunidad</li>
-    </ul>
     </div>
     
     <div class="Contenido1">

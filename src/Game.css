@@ -1,21 +1,6 @@
 *{
     margin:0;
 }
-.menu li {
-  display: inline-block;
-  padding-left:20px;
-  padding-right: 20px;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  text-decoration: none;
-  position:relative;
-}
-.men1{
-    margin-left: 650px;
-}
-.menu2{
-    align-items: left;
-}
 .Contenido1{
     text-align: center;
     margin-top: 30px;
@@ -32,7 +17,7 @@
 }
 .Img1{
     position: absolute;
-    left: -65px;
+    left: -66px;
     top: -21px;
    
 }
@@ -43,7 +28,7 @@
 }
 .Img2{
     position: absolute;
-    left: 975px;
+    left: 1200px;
     top: 90px;
    
 }
