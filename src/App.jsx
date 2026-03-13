@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import King from './King'
-
+import PostsSection from './PostsSection'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,6 +9,8 @@ function App() {
   return (
     <>
       <King/>
+       <PostsSection/>
+      
     </>
   )
 }
