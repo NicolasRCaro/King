@@ -5,6 +5,7 @@ import PostsSection from "./PostsSection";
 import Team from "./footer/Team.jsx"
 import Community from "./community.jsx";
 import CorporateMedia from "./CorporateMedia.jsx";
+import KingCareers from "./KingCareers.jsx";
 function King(){
     const [vistaActual, setVistaActual] = useState("king");
     const [Header,setHeader]=useState(["Inicio","Juegos","Trabajos"]);
@@ -32,7 +33,7 @@ function King(){
     if (vistaActual === "game") {
         return <Game />;
     }
-    if (vistaActual === "trabajos")  return <Trabajos />;   
+    if (vistaActual === "trabajos")  return <KingCareers />;   
     if (vistaActual === "tarjeta")   return <Tarjeta />;
     if (vistaActual === "comunidad") return <Community />;
     if (vistaActual === "team")      return <Team />;
@@ -58,7 +59,7 @@ function King(){
             <ul className="Integrantes">
                 <li><a href="#">{Integrantes[0]}</a></li>
                 <li><a onClick={() => setVistaActual("game")} style={{cursor:"pointer"}}>{Integrantes[1]}</a></li>
-                <li><a href="#">{Integrantes[2]}</a></li>
+                <li><a onClick={() => setVistaActual("trabajos")} style={{cursor:"pointer"}}>{Integrantes[2]}</a></li>
                 <li><a href="#">{Integrantes[3]}</a></li>
                 <li><a onClick={() => setVistaActual("comunidad")} style={{cursor:"pointer"}}>{Integrantes[4]}</a></li>
                 <li><a onClick={() => setVistaActual("team")} style={{cursor:"pointer"}}>{Integrantes[5]}</a></li>
